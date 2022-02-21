@@ -5,8 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
-
-import static org.testng.Assert.assertTrue;
+import org.testng.Assert;
 
 public class SeleniumTest {
     public static void main(String[] args){
@@ -27,7 +26,7 @@ public class SeleniumTest {
         driver.findElement(By.xpath("//div[@class='options']/input[@id='salad']")).click();
         driver.findElement(By.tagName("textarea")).sendKeys("this is a cool website. thank you Karen!!");
         System.out.println(driver.findElement(By.xpath("//strong[contains(.,'Let us know how you want your food!! ')]")).getText());
-        assertTrue(driver.findElement(By.xpath("//strong[contains(.,'Let us know how you want your food!! ')]")).getText().contains("Let us know how you want your food!"));
+        Assert.assertTrue(driver.findElement(By.xpath("//strong[contains(.,'Let us know how you want your food!! ')]")).getText().contains("Let us know how you want your food!"));
 
         Select dropdown = new Select(driver.findElement(By.tagName("select")));
         dropdown.selectByIndex(1);

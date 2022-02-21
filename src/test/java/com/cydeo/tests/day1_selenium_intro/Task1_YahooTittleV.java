@@ -27,18 +27,12 @@ public class Task1_YahooTittleV {
     public void testCaseForHeaderNav(){
 
     // Set up Chrome Driver
-        WebDriverManager.chromedriver().
-
-    setup();
+        WebDriverManager.chromedriver().setup();
 
     // Open Chrome Driver
      driver = new ChromeDriver();
     //Make our page fullScreen
-        driver.manage().
-
-    window().
-
-    maximize();
+        driver.manage().window().maximize();
 
     // Go to Yahoo
 //        driver.get("https://www.yahoo.com");
